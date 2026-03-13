@@ -2,3 +2,4 @@ Django==4.2.6
 dnspython==2.7.0
 psycopg2-binary==2.9.9
 Pillow==10.3.0
+gunicorn

@@ -33,11 +33,9 @@ except ImportError:
     DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
     
     # Database settings
-    import dj_database_url
+import dj_database_url
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
-    )
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
     # Email settings
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')

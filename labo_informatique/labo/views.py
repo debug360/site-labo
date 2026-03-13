@@ -143,7 +143,7 @@ def team(request):
     
     context = {
         'membres': membres,
-        'themes': membre.theme_actuel,
+        'themes': theme,
     }
     
     return render(request, 'core/team.html', context)

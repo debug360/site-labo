@@ -158,8 +158,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = EMAIL_HOST_USER
-DEFAULT_FROM_EMAIL = DEFAULT_FROM_EMAIL
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', '')
+
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost',
@@ -167,5 +168,4 @@ CSRF_TRUSTED_ORIGINS = [
     # Tu peux ajouter ton IP de machine ou domaine ici si tu veux deployer sur un server 
     'http://vmi1981421',
 ]
-CONTACT_EMAIL = CONTACT_EMAIL
-
+CONTACT_EMAIL = os.environ.get('CONTACT_EMAIL', '')

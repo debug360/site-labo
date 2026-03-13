@@ -109,5 +109,5 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 CONTACT_EMAIL = os.environ.get('CONTACT_EMAIL', '')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 
